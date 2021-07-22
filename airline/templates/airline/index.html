@@ -1,0 +1,12 @@
+{% extends "airline/base.html" %}
+
+{% block title %}
+    Flight App
+{% endblock %}
+
+{% block body %}
+    <h4>All Flights</h4>
+    {% for flight in flights %}
+       <a href="{% url 'airline:detail_flight' flight.id %}"><li>{{flight}}</li></a>
+    {% endfor %}
+{% endblock %}
